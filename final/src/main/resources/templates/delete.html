@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Student</title>
+</head>
+<body>
+<h1>Delete Student</h1>
+<form action="/delete" method="post">
+    <label for="idstudent">Student ID:</label>
+    <input type="text" id="idstudent" name="idstudent" required>
+    <br>
+    <button type="submit">Delete</button>
+</form>
+<p style="color: red;">
+    <!-- Display error message if deletion fails -->
+    <span th:if="${error}" th:text="${error}"></span>
+</p>
+<p style="color: green;">
+    <span th:if="${success}" th:text="${success}"></span>
+</p>
+<a href="/">Back to Login</a>
+</body>
+</html>
